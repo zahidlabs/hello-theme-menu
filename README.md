@@ -28,7 +28,10 @@ using this style you can convert default menu to full width, witch will dropdown
 
 
 ## Accessability
-Menu toggle in original code was using a label and evenListener. I have to changed it to button tag with function on click. it is the right approach if you ask any accessability advocate. _accessability button is added to only full screen menu right now, I will update Soon._
+- I have used button tag with function on click. It is the right approach if you ask any accessability advocate.
+- Tab will skip menu items if menu is not open.
+- If menu is opened, next tab will start with menu items.
+- _accessability button is added to only full screen and full width menu. will update responsive menu soon._
 
 ### Resources
 - [w3schools responsive menu](https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_topnav)
