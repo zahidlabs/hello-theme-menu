@@ -21,7 +21,7 @@ using this style you can convert default menu to full width, witch will dropdown
 - embed js code using some code insertion plugin or using functions.php.
 - that is it. enjoy
 
-##### Style 1 Additionally _Style 1_
+##### Additionally (_Style 1_)
 - you can change the width of media query to select where you burger icon to kick in.
 - right now it is set to 1024px,
 - change `@media screen and (max-width: 1024px)` in css to match your needs.
