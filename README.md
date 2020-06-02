@@ -1,24 +1,27 @@
-1. # Add responsive menu and burger icon to Elemento Hello
+# About .this
+
+by default elementor hello theme is shipped with a generic menu. I love this theme because of its small footprint and it is updated by the team.
+I use this theme for some projects where I don't use Elementor. In that case default menu can use some styling.
+
+## Style 1: Responsive menu with burger icon
 
 hello theme menu is not responsive.
 by using this css and script, you can easily convert the default menu responsive menu.
 
+## Style 2: Full screen menu
 
-2. # Convert Elemento Hello theme menu to full screen menu
+This will convert default menu to full screen menu and there is button to open the menu.
 
-by default the menu in elementor hello theme is very generic, there are no options to customize it.
-by adding this css and script to the page you can easily convert the default menu to full screen menu.
+## Style 3: Full width dropdown menu
 
-3. # Full width dropdown menu
-
-using this style you can convert default menu to full width witch will dropdown by clicking the button next to site branding.
+using this style you can convert default menu to full width, witch will dropdown by clicking the button next to site branding.
 
 ## How to use all these styles
 - Usage is very simple. just add the styles to your theme child style.css file.
 - embed js code using some code insertion plugin or using functions.php.
 - that is it. enjoy
 
-##### (Style 1) Additionally
+##### Style 1 Additionally _Style 1_
 - you can change the width of media query to select where you burger icon to kick in.
 - right now it is set to 1024px,
 - change `@media screen and (max-width: 1024px)` in css to match your needs.
