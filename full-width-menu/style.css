@@ -2,67 +2,76 @@
   full width slide down header for hello theme
 ********************************************/
 .site-branding {
-    order: 0;
-    flex: 1 50%;
-    max-width: unset;;
-  }
-  .toggle-btn {
-    order: 1;
-    flex: 1 50%;
-  }
-  .full-width-menu {
-    order: -1;
-    flex: 1 100%;
-  }
-  .full-width-menu {
-    position: absolute;
-    width: 100%;
-    top: 0;
-    left: 0;
-    background: #f0f0f0;
-    overflow: hidden;
-    transform: scaleY(0);
-    transform-origin: top;
-    transition: transform 0.26s ease;
-  }
-  .full-width-menu.active {
-    position: unset;
-    transform: scaleY(1);
-  }
+  order: 0;
+  flex: 1 50%;
+  max-width: unset;;
+}
+.toggle-btn {
+  order: 1;
+  flex: 1 50%;
+}
+.full-width-menu {
+
+}
+
+.full-width-menu {
+  order: -1;
+  flex: 1 100%;
+  width: 100%;
+  background: #f0f0f0;
+  display: none;
+  overflow: hidden;
+  transition: all 0.26s ease;
+
+}
+.full-width-menu.active {
+  position: unset;
+  display: flex;
+}
+
+.full-width-menu.animation-out {
+  max-height: 0px;
+}
+.full-width-menu.animation-in {
+  max-height: 70vh;
+  overflow-y: auto;
   
-  .full-width-menu .menu-main-menu-container {
-    width: 100%;
-    display: flex;
-  }
-  
-  .full-width-menu .menu {
-    flex-direction: column;
-    flex: 1;
-  }
-  .full-width-menu .menu li {
-    flex-direction: column;
-    flex: 1;
-  }
-  .full-width-menu .menu li a {
-    flex-direction: column;
-    flex: 1;
-  }
-  .full-width-menu ul.menu li.menu-item-has-children::after {
-    display: none;
-  }
-  .full-width-menu ul#menu-main-menu li ul, .full-width-menu  ul#menu-main-menu li:hover > ul {
-    background: transparent;
-    display: flex;
-    flex-direction: column;
-    position: unset;
-  }
-  ul#menu-main-menu .menu-item-has-children {
-    padding: 0px;
-  }
-  
-  ul#menu-main-menu  .menu-item {
-    text-align: center;
-    font-weight: 900;
-    text-transform: uppercase;
-    font-size: 20px;
-  }
+}
+
+.full-width-menu .menu-main-menu-container {
+  width: 100%;
+  display: flex;
+  align-self: start;
+}
+
+.full-width-menu .menu {
+  flex-direction: column;
+  flex: 1;
+}
+.full-width-menu .menu li {
+  flex-direction: column;
+  flex: 1;
+}
+.full-width-menu .menu li a {
+  flex-direction: column;
+  flex: 1;
+}
+.full-width-menu ul.menu li.menu-item-has-children::after {
+  display: none;
+}
+.full-width-menu ul#menu-main-menu li ul, .full-width-menu  ul#menu-main-menu li:hover > ul {
+  background: transparent;
+  display: flex;
+  flex-direction: column;
+  position: unset;
+}
+ul#menu-main-menu .menu-item-has-children {
+  padding: 0px;
+}
+
+ul#menu-main-menu  .menu-item {
+  text-align: center;
+  font-weight: 900;
+  text-transform: uppercase;
+  font-size: 20px;
+}
