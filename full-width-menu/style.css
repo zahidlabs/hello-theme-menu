@@ -1,0 +1,76 @@
+body {
+    background: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+.menu ul {
+    font-family: 'Merriweather', serif;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.menu ul li {
+    color: #333;
+    font-size: 12px;
+    letter-spacing: 2px;
+    padding: 15px 0;
+    text-transform: uppercase;
+}
+
+.menu ul li:hover {
+    background: #e9e9e9;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #333;
+}
+
+.menu-toggle {
+    background: none;
+    color: #333;
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 25px;
+}
+
+.menu-toggle a {
+    text-decoration: none;
+    color: #333;
+}
+
+.about-pen {
+    width: 100%;
+    font-family: 'Merriweather', serif;
+    font-size: 40px;
+    margin-top: 100px;
+    text-align: center;
+    color: #333;
+}
+
+
+.menu {
+    position: absolute;
+    background: #f0f0f0;
+    width: 100%;
+    overflow: hidden;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 0.26s ease;
+
+}
+
+.menu.active {
+    position: unset;
+    /*display: block;*/
+    transform: scaleY(1);
+}
+button {
+    background: red;
+    width: 30px;
+    height: 30px;
+}

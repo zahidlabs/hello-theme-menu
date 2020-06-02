@@ -1,0 +1,162 @@
+/*
+full screen menu
+*/
+
+
+@keyframes bugfix {
+    from {
+        padding: 0;
+    }
+
+    to {
+        padding: 0;
+    }
+}
+
+@-webkit-keyframes bugfix {
+    from {
+        padding: 0;
+    }
+
+    to {
+        padding: 0;
+    }
+}
+
+
+input[type=checkbox] {
+    display: none;
+}
+
+input[type=checkbox]:checked~#overlay {
+    visibility: visible;
+}
+
+#overlay-button {
+    position: absolute;
+    right: 2em;
+    top: 3em;
+    padding: 26px 11px;
+    z-index: 5;
+    user-select: none;
+}
+
+#overlay-button button {
+    text-align: left;
+    background-color: transparent;
+    border: 0px;
+    padding: 20px 10px;
+}
+
+#overlay-button button span {
+    height: 4px;
+    width: 35px;
+    border-radius: 2px;
+    background-color: blue;
+    position: relative;
+    display: block;
+    transition: all .2s ease-in-out;
+}
+
+#overlay-button button span:before {
+    top: -10px;
+    visibility: visible;
+}
+
+#overlay-button button span:after {
+    top: 10px;
+}
+
+#overlay-button button span:before,
+#overlay-button button span:after {
+    height: 4px;
+    width: 35px;
+    border-radius: 2px;
+    background-color: blue;
+    position: absolute;
+    content: "";
+    transition: all .2s ease-in-out;
+}
+
+input[type=checkbox]:checked~#overlay-button button span:before {
+    transform: rotate(45deg) translate(7px, 7px);
+    opacity: 1;
+}
+
+input[type=checkbox]:checked~#overlay-button button span:after {
+    transform: rotate(-45deg) translate(7px, -7px);
+}
+
+#overlay-button:hover button span,
+#overlay-button:hover button span:before,
+#overlay-button:hover button span:after {
+    background: #333332;
+}
+
+input[type=checkbox]:checked~#overlay-button:hover button span,
+input[type=checkbox]:checked~#overlay-button button span {
+    background: transparent;
+}
+
+
+#overlay {
+    min-height: 100vh;
+    width: 100%;
+    background: #ec6451;
+    z-index: 2;
+    visibility: hidden;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+}
+
+#overlay.active {
+    visibility: visible;
+}
+
+#overlay .menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    height: 100vh;
+    padding-left: 0;
+    list-style-type: none;
+}
+
+#overlay .menu li {
+    /*   padding: 1em; */
+}
+
+#overlay .menu li a {
+    color: #1c0068;
+    text-decoration: none;
+    font-size: 1.5em;
+}
+
+#overlay .menu li a:hover {
+    color: #333332;
+}
+
+.menu-item-has-children {
+    flex-direction: column;
+}
+
+#overlay ul.menu li ul {
+    background: none;
+    border: 0px;
+    display: flex;
+    flex-direction: column;
+    position: unset;
+    min-width: auto;
+}
+
+.site-navigation ul.menu li.menu-item-has-children {
+    padding: 0px;
+}
+
+#overlay ul.menu li.menu-item-has-children::after {
+    display: none;
+}
