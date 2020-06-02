@@ -1,3 +1,6 @@
+/*******************************************
+  responsive menu  dropdown for hello theme
+********************************************/
 
 i.bars i {
     width: 35px;
@@ -39,7 +42,7 @@ i.bars i {
         background-color: #efefef;
     }
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1000px) {
     .menu.responsive {
         position: relative;
     }
