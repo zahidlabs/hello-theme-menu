@@ -1,6 +1,7 @@
 /*******************************************
   fullscreen menu for hello theme
 ********************************************/
+
 *:focus {
   outline: 1px dotted black;
   box-sizing: border-box;
@@ -10,29 +11,30 @@
   from {
     padding: 0;
   }
+
   to {
     padding: 0;
   }
 }
+
 @-webkit-keyframes bugfix {
   from {
     padding: 0;
   }
+
   to {
     padding: 0;
   }
-} 
-
-
+}
 
 #overlay-button {
-  /* position: absolute; */
   right: 2em;
   top: 3em;
   padding: 26px 11px;
   z-index: 5;
   user-select: none;
 }
+
 #overlay-button {
   text-align: left;
   background-color: transparent;
@@ -40,9 +42,11 @@
   padding: 20px 10px;
   margin-left: auto;
 }
+
 #overlay-button:focus {
   outline: 1px dotted black;
 }
+
 #overlay-button span {
   height: 4px;
   width: 35px;
@@ -52,14 +56,18 @@
   display: block;
   transition: all .2s ease-in-out;
 }
+
 #overlay-button span:before {
   top: -10px;
   visibility: visible;
 }
+
 #overlay-button span:after {
   top: 10px;
 }
-#overlay-button span:before, #overlay-button span:after {
+
+#overlay-button span:before,
+#overlay-button span:after {
   height: 4px;
   width: 35px;
   border-radius: 2px;
@@ -68,20 +76,26 @@
   content: "";
   transition: all .2s ease-in-out;
 }
+
 #overlay-button.active span:before {
   transform: rotate(45deg) translate(7px, 7px);
   opacity: 1;
 }
+
 #overlay-button.active span:after {
   transform: rotate(-45deg) translate(7px, -7px);
 }
-#overlay-button:hover span, #overlay-button:hover span:before, #overlay-button:hover span:after {
+
+#overlay-button:hover span,
+#overlay-button:hover span:before,
+#overlay-button:hover span:after {
   background: #333332;
 }
-#overlay-button.active:hover span, #overlay-button.active span {
+
+#overlay-button.active:hover span,
+#overlay-button.active span {
   background: transparent;
 }
-
 
 #overlay {
   min-height: 100vh;
@@ -93,11 +107,13 @@
   top: 0;
   right: 0;
   left: 0;
-}   
+}
+
 #overlay.active {
   visibility: visible;
 }
-#overlay .menu{
+
+#overlay .menu {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -107,34 +123,38 @@
   padding-left: 0;
   list-style-type: none;
 }
+
 #overlay .menu li a {
   color: #1c0068;
   text-decoration: none;
   font-size: 1.5em;
 }
+
 #overlay .menu li a:hover {
   color: #333332;
 }
+
 #overlay .menu-item-has-children {
-	flex-direction: column;
+  flex-direction: column;
 }
+
 #overlay ul.menu li ul {
-	background: none;
-	border: 0px;
-	display: flex;
-	flex-direction: column;
-	position: unset;
-	min-width: auto;
+  background: none;
+  border: 0px;
+  display: flex;
+  flex-direction: column;
+  position: unset;
+  min-width: auto;
 }
 
 .overlay-menu-added .site-navigation ul.menu li.menu-item-has-children {
-	padding: 0px;
+  padding: 0px;
 }
-
 
 #overlay ul.menu li.menu-item-has-children::after {
-    display: none;
+  display: none;
 }
+
 .overlay-menu-added .site-navigation {
   flex: 0;
 }

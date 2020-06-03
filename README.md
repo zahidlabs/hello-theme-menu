@@ -32,7 +32,6 @@ using this style you can convert default menu to full width, witch will dropdown
 - Tab will skip menu items if menu is not open.
 - If menu is opened, next tab will start with menu items.
 - there is button to close menu in full screen style. (unable to close menu on focus change. Any suggestion?)
-- _accessability button is added to only full screen and full width menu. will update responsive menu soon._
 
 ### Resources
 - [w3schools responsive menu](https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_topnav)

@@ -1,21 +1,38 @@
 /******************
  * add responsive menu to hello theme
  ******************/
-add burger icon
-var menuContainer = document.querySelector('.menu-main-menu-container');
-menuContainer.insertAdjacentHTML('afterbegin', '<a href="javascript:void(0);" class="icon" onclick="addResponsive()"><i class="bars"><i></i><i></i><i></i></i></a>');
-// responsive
+
+var siteBranding = document.querySelector('.site-branding');
+var headerContainer = document.querySelector('.site-header');
+
+
+siteBranding.insertAdjacentHTML('afterend', '<button id="overlay-button" class="toggle-btn" type="button" aria-label="Toggle Menu" aria-haspopup="true" onclick="toggleMenu();"><span aria-hidden="true"></span></button>');
+
+headerContainer.classList.add('responsive-header');
+
 var mainMenu = document.getElementById("menu-main-menu");
-function addResponsive() {
+
+function toggleMenu() {
   if (mainMenu.className === "menu") {
-    mainMenu.className += " responsive";
+    setMenuStateOpen(true);
   } else {
-    mainMenu.className = "menu";
+    setMenuStateOpen(false);
   }
 }
-document.addEventListener('click', function(event) {
-  var isClickInside = menuContainer.contains(event.target);
+
+document.addEventListener('click', function (event) {
+  var isClickInside = headerContainer.contains(event.target);
   if (!isClickInside && mainMenu.classList.contains('responsive')) {
-    mainMenu.className = "menu";
+    setMenuStateOpen(false);
   }
 });
+
+function setMenuStateOpen(state) {
+  if (state) {
+    mainMenu.className += " responsive";
+    document.getElementById("overlay-button").classList.toggle('active', true);
+  } else {
+    mainMenu.className = "menu";
+    document.getElementById("overlay-button").classList.toggle('active', false);
+  }
+}

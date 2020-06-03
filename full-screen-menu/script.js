@@ -1,4 +1,4 @@
-var siteBranding = document.querySelector('.site-branding'); 
+var siteBranding = document.querySelector('.site-branding');
 var headerContainer = document.querySelector('.site-header');
 var menuContainer = document.querySelector('.site-navigation');
 var mainMenuDiv = document.querySelector('.menu-main-menu-container');
@@ -13,13 +13,14 @@ var closeButton = document.getElementById('overlay-close-button');
 headerContainer.classList.add('overlay-menu-added')
 
 function toggleMenu() {
-    if(!menuOpen) {
+    if (!menuOpen) {
         menuIsOpen(true);
     } else {
         menuIsOpen(false);
     }
 }
-function menuIsOpen(state){
+
+function menuIsOpen(state) {
     if (state) {
         menuOpen = true;
         mainMenuDiv.classList.toggle('active', true)

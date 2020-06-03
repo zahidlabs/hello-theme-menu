@@ -2,55 +2,115 @@
   responsive menu  dropdown for hello theme
 ********************************************/
 
-i.bars i {
+#overlay-button {
+    padding: 26px 11px;
+    z-index: 5;
+    user-select: none;
+    text-align: left;
+    background-color: transparent;
+    border: 0px;
+    padding: 20px 10px;
+    margin-left: auto;
+  }
+  
+  #overlay-button:focus {
+    outline: 1px dotted black;
+  }
+  
+  #overlay-button span {
+    height: 4px;
     width: 35px;
-    height: 5px;
-    background-color: black;
-    margin: 6px 0;
+    border-radius: 2px;
+    background-color: blue;
+    position: relative;
     display: block;
-    border-radius: 3px;
-}
-
-.icon {
-    display: none;
-}
-:root {
-    --menuBreak: 1200px;
-}
-@media screen and (max-width: 1000px) {
-    .site-navigation ul.menu li {
-        display: none;
+    transition: all .2s ease-in-out;
+  }
+  
+  #overlay-button span:before {
+    top: -10px;
+    visibility: visible;
+  }
+  
+  #overlay-button span:after {
+    top: 10px;
+  }
+  
+  #overlay-button span:before,
+  #overlay-button span:after {
+    height: 4px;
+    width: 35px;
+    border-radius: 2px;
+    background-color: blue;
+    position: absolute;
+    content: "";
+    transition: all .2s ease-in-out;
+  }
+  
+  #overlay-button.active span:before {
+    transform: rotate(45deg) translate(7px, 7px);
+    opacity: 1;
+  }
+  
+  #overlay-button.active span:after {
+    transform: rotate(-45deg) translate(7px, -7px);
+  }
+  
+  #overlay-button:hover span,
+  #overlay-button:hover span:before,
+  #overlay-button:hover span:after {
+    background: #333332;
+  }
+  
+  #overlay-button.active:hover span,
+  #overlay-button.active span {
+    background: transparent;
+  }
+  
+  @media screen and (max-width: 1024px) {
+    .responsive-header .site-navigation {
+      flex: 0;
     }
-    .icon {
-        display: block;
+  
+    .responsive-header .menu-main-menu-container {
+      position: relative;
     }
-    #menu-main-menu {
-        position: absolute;
-        right: 0;
-        background: #efefef;
-        border: 1px solid #d2d2d2;
-        box-sizing: border-box;
-        border-radius: 5px;
+  
+    .responsive-header #menu-main-menu {
+      position: absolute;
+      right: 0;
+      top: 24px;
+      background: #efefef;
+      border: 1px solid #d2d2d2;
+      box-sizing: border-box;
+      border-radius: 5px;
     }
-    .site-navigation ul.menu li.menu-item-has-children::after {
-        display: none;
+  
+    .responsive-header .site-navigation ul.menu li {
+      display: none;
     }
-    .site-navigation ul.menu.responsive li ul {
-        display: block;
-        position: initial;
-        padding-left: 10px;
-        background-color: #efefef;
-    }
-}
-@media screen and (max-width: 1000px) {
-    .menu.responsive {
-        position: relative;
-    }
+  
     .site-navigation ul.menu.responsive li {
-        float: none;
-        display: block;
-        text-align: left;
-        flex-grow: 1;
-        width: 100%;
+      float: none;
+      display: flex;
+      flex-direction: column;
+      text-align: left;
+      flex-grow: 1;
+      width: 100%;
     }
-}
+  
+    .site-navigation ul.menu.responsive li ul {
+      display: flex;
+      flex-direction: column;
+      position: initial;
+      padding-left: 10px;
+      background-color: #efefef;
+    }
+  
+    /* hide dropdonw icon */
+    .responsive-header .site-navigation ul.menu li.menu-item-has-children::after {
+      display: none;
+    }
+  
+  
+  }
