@@ -1,6 +1,10 @@
 /*******************************************
   fullscreen menu for hello theme
 ********************************************/
+*:focus {
+  outline: 1px dotted black;
+  box-sizing: border-box;
+}
 
 @keyframes bugfix {
   from {
@@ -17,33 +21,29 @@
   to {
     padding: 0;
   }
-} */
+} 
 
-
-input[type=checkbox] {
-  display: none;
-}
-
-input[type=checkbox]:checked ~ #overlay {
-  visibility: visible;
-}
 
 
 #overlay-button {
-  position: absolute;
+  /* position: absolute; */
   right: 2em;
   top: 3em;
   padding: 26px 11px;
   z-index: 5;
   user-select: none;
 }
-#overlay-button button {
+#overlay-button {
   text-align: left;
   background-color: transparent;
   border: 0px;
   padding: 20px 10px;
+  margin-left: auto;
 }
-#overlay-button button span {
+#overlay-button:focus {
+  outline: 1px dotted black;
+}
+#overlay-button span {
   height: 4px;
   width: 35px;
   border-radius: 2px;
@@ -52,14 +52,14 @@ input[type=checkbox]:checked ~ #overlay {
   display: block;
   transition: all .2s ease-in-out;
 }
-#overlay-button button span:before {
+#overlay-button span:before {
   top: -10px;
   visibility: visible;
 }
-#overlay-button button span:after {
+#overlay-button span:after {
   top: 10px;
 }
-#overlay-button button span:before, #overlay-button button span:after {
+#overlay-button span:before, #overlay-button span:after {
   height: 4px;
   width: 35px;
   border-radius: 2px;
@@ -68,17 +68,17 @@ input[type=checkbox]:checked ~ #overlay {
   content: "";
   transition: all .2s ease-in-out;
 }
-input[type=checkbox]:checked ~ #overlay-button button span:before {
+#overlay-button.active span:before {
   transform: rotate(45deg) translate(7px, 7px);
   opacity: 1;
 }
-input[type=checkbox]:checked ~ #overlay-button button span:after {
+#overlay-button.active span:after {
   transform: rotate(-45deg) translate(7px, -7px);
 }
-#overlay-button:hover button span, #overlay-button:hover button span:before, #overlay-button:hover button span:after {
+#overlay-button:hover span, #overlay-button:hover span:before, #overlay-button:hover span:after {
   background: #333332;
 }
-input[type=checkbox]:checked ~ #overlay-button:hover button span, input[type=checkbox]:checked ~ #overlay-button button span {
+#overlay-button.active:hover span, #overlay-button.active span {
   background: transparent;
 }
 
@@ -93,7 +93,7 @@ input[type=checkbox]:checked ~ #overlay-button:hover button span, input[type=che
   top: 0;
   right: 0;
   left: 0;
-}
+}   
 #overlay.active {
   visibility: visible;
 }
@@ -115,7 +115,7 @@ input[type=checkbox]:checked ~ #overlay-button:hover button span, input[type=che
 #overlay .menu li a:hover {
   color: #333332;
 }
-.menu-item-has-children {
+#overlay .menu-item-has-children {
 	flex-direction: column;
 }
 #overlay ul.menu li ul {
@@ -127,11 +127,14 @@ input[type=checkbox]:checked ~ #overlay-button:hover button span, input[type=che
 	min-width: auto;
 }
 
-.site-navigation ul.menu li.menu-item-has-children {
+.overlay-menu-added .site-navigation ul.menu li.menu-item-has-children {
 	padding: 0px;
 }
 
 
 #overlay ul.menu li.menu-item-has-children::after {
     display: none;
+}
+.overlay-menu-added .site-navigation {
+  flex: 0;
 }

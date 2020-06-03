@@ -21,7 +21,7 @@ using this style you can convert default menu to full width, witch will dropdown
 - embed js code using some code insertion plugin or using functions.php.
 - that is it. enjoy
 
-##### Additionally (_Style 1_)
+##### _Style 1_
 - you can change the width of media query to select where you burger icon to kick in.
 - right now it is set to 1024px,
 - change `@media screen and (max-width: 1024px)` in css to match your needs.
@@ -31,6 +31,7 @@ using this style you can convert default menu to full width, witch will dropdown
 - I have used button tag with function on click. It is the right approach if you ask any accessability advocate.
 - Tab will skip menu items if menu is not open.
 - If menu is opened, next tab will start with menu items.
+- there is button to close menu in full screen style. (unable to close menu on focus change. Any suggestion?)
 - _accessability button is added to only full screen and full width menu. will update responsive menu soon._
 
 ### Resources
